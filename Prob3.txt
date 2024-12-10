@@ -1,0 +1,27 @@
+/*1. Specific example illustrating how a method might throw a nullPointerException*/
+
+/*Let's consider the following program class that includes a method that takes a string as a parameter and prints its length */
+/*In this example, a method might throw a nullPointerException if a null pointer is passed as an argument,
+ * while the method is expecting a specific object parameter (in this case a String)
+ */
+
+public class Prob2 {
+    public static void main (String [] args) {
+        //This line will throw a nullPointerException
+        System.out.println(slength(null));  
+    }
+
+    private static int slength(String str) {
+        return str.length();
+    }
+}
+
+
+
+
+/*2.  nullPointerException is not a checked exception because it is a very common runtime error that can happen
+a lot time because of a programming error, such as objects that are not properly initialized.
+
+Making it a checked would require developers to declare a lot of throws nullPointerException clauses in methods headers
+and write a lot of try catch blocks to handle them.
+*/
